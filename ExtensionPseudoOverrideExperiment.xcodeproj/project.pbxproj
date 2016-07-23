@@ -9,12 +9,16 @@
 /* Begin PBXBuildFile section */
 		63C984261D42867900F7054D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C984251D42867900F7054D /* main.m */; };
 		63C984291D42867900F7054D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C984281D42867900F7054D /* AppDelegate.m */; };
-		63C9842C1D42867900F7054D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C9842B1D42867900F7054D /* ViewController.m */; };
+		63C9842C1D42867900F7054D /* ExtendableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C9842B1D42867900F7054D /* ExtendableViewController.m */; };
 		63C9842F1D42867900F7054D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63C9842D1D42867900F7054D /* Main.storyboard */; };
 		63C984311D42867900F7054D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63C984301D42867900F7054D /* Assets.xcassets */; };
 		63C984341D42867900F7054D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63C984321D42867900F7054D /* LaunchScreen.storyboard */; };
 		63C9843F1D42867900F7054D /* ExtensionPseudoOverrideExperimentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C9843E1D42867900F7054D /* ExtensionPseudoOverrideExperimentTests.m */; };
 		63C9844A1D42867900F7054D /* ExtensionPseudoOverrideExperimentUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C984491D42867900F7054D /* ExtensionPseudoOverrideExperimentUITests.m */; };
+		63C9845B1D4289F500F7054D /* ExtendableViewController+PrintHiOnViewDidLoad.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C9845A1D4289F500F7054D /* ExtendableViewController+PrintHiOnViewDidLoad.m */; };
+		63E3E98D1D42D4B500CA69DE /* InstanceMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E3E98C1D42D4B500CA69DE /* InstanceMethod.m */; };
+		63E3E9911D42DA2600CA69DE /* RuntimeInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E3E9901D42DA2600CA69DE /* RuntimeInspector.m */; };
+		63E3E9941D42E14F00CA69DE /* NSArray+Functional.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E3E9931D42E14F00CA69DE /* NSArray+Functional.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +43,8 @@
 		63C984251D42867900F7054D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		63C984271D42867900F7054D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		63C984281D42867900F7054D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		63C9842A1D42867900F7054D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		63C9842B1D42867900F7054D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		63C9842A1D42867900F7054D /* ExtendableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtendableViewController.h; sourceTree = "<group>"; };
+		63C9842B1D42867900F7054D /* ExtendableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExtendableViewController.m; sourceTree = "<group>"; };
 		63C9842E1D42867900F7054D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		63C984301D42867900F7054D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		63C984331D42867900F7054D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +55,14 @@
 		63C984451D42867900F7054D /* ExtensionPseudoOverrideExperimentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExtensionPseudoOverrideExperimentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		63C984491D42867900F7054D /* ExtensionPseudoOverrideExperimentUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExtensionPseudoOverrideExperimentUITests.m; sourceTree = "<group>"; };
 		63C9844B1D42867900F7054D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63C984591D4289F500F7054D /* ExtendableViewController+PrintHiOnViewDidLoad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ExtendableViewController+PrintHiOnViewDidLoad.h"; sourceTree = "<group>"; };
+		63C9845A1D4289F500F7054D /* ExtendableViewController+PrintHiOnViewDidLoad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ExtendableViewController+PrintHiOnViewDidLoad.m"; sourceTree = "<group>"; };
+		63E3E98B1D42D4B500CA69DE /* InstanceMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstanceMethod.h; sourceTree = "<group>"; };
+		63E3E98C1D42D4B500CA69DE /* InstanceMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstanceMethod.m; sourceTree = "<group>"; };
+		63E3E98F1D42DA2600CA69DE /* RuntimeInspector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuntimeInspector.h; sourceTree = "<group>"; };
+		63E3E9901D42DA2600CA69DE /* RuntimeInspector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuntimeInspector.m; sourceTree = "<group>"; };
+		63E3E9921D42E14F00CA69DE /* NSArray+Functional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Functional.h"; sourceTree = "<group>"; };
+		63E3E9931D42E14F00CA69DE /* NSArray+Functional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Functional.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,8 +115,7 @@
 			children = (
 				63C984271D42867900F7054D /* AppDelegate.h */,
 				63C984281D42867900F7054D /* AppDelegate.m */,
-				63C9842A1D42867900F7054D /* ViewController.h */,
-				63C9842B1D42867900F7054D /* ViewController.m */,
+				63C984571D4289C200F7054D /* ExtendableViewController */,
 				63C9842D1D42867900F7054D /* Main.storyboard */,
 				63C984301D42867900F7054D /* Assets.xcassets */,
 				63C984321D42867900F7054D /* LaunchScreen.storyboard */,
@@ -138,6 +149,39 @@
 				63C9844B1D42867900F7054D /* Info.plist */,
 			);
 			path = ExtensionPseudoOverrideExperimentUITests;
+			sourceTree = "<group>";
+		};
+		63C984571D4289C200F7054D /* ExtendableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				63E3E98E1D42DA0800CA69DE /* Groundwork */,
+				63C9842A1D42867900F7054D /* ExtendableViewController.h */,
+				63C9842B1D42867900F7054D /* ExtendableViewController.m */,
+				63C984581D4289C800F7054D /* Categories */,
+			);
+			name = ExtendableViewController;
+			sourceTree = "<group>";
+		};
+		63C984581D4289C800F7054D /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				63C984591D4289F500F7054D /* ExtendableViewController+PrintHiOnViewDidLoad.h */,
+				63C9845A1D4289F500F7054D /* ExtendableViewController+PrintHiOnViewDidLoad.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		63E3E98E1D42DA0800CA69DE /* Groundwork */ = {
+			isa = PBXGroup;
+			children = (
+				63E3E9921D42E14F00CA69DE /* NSArray+Functional.h */,
+				63E3E9931D42E14F00CA69DE /* NSArray+Functional.m */,
+				63E3E98B1D42D4B500CA69DE /* InstanceMethod.h */,
+				63E3E98C1D42D4B500CA69DE /* InstanceMethod.m */,
+				63E3E98F1D42DA2600CA69DE /* RuntimeInspector.h */,
+				63E3E9901D42DA2600CA69DE /* RuntimeInspector.m */,
+			);
+			name = Groundwork;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,9 +314,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63C9842C1D42867900F7054D /* ViewController.m in Sources */,
+				63C9842C1D42867900F7054D /* ExtendableViewController.m in Sources */,
 				63C984291D42867900F7054D /* AppDelegate.m in Sources */,
+				63E3E9911D42DA2600CA69DE /* RuntimeInspector.m in Sources */,
+				63E3E98D1D42D4B500CA69DE /* InstanceMethod.m in Sources */,
+				63E3E9941D42E14F00CA69DE /* NSArray+Functional.m in Sources */,
 				63C984261D42867900F7054D /* main.m in Sources */,
+				63C9845B1D4289F500F7054D /* ExtendableViewController+PrintHiOnViewDidLoad.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,6 +546,7 @@
 				63C984501D42867900F7054D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		63C984511D42867900F7054D /* Build configuration list for PBXNativeTarget "ExtensionPseudoOverrideExperimentTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +555,7 @@
 				63C984531D42867900F7054D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		63C984541D42867900F7054D /* Build configuration list for PBXNativeTarget "ExtensionPseudoOverrideExperimentUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +564,7 @@
 				63C984561D42867900F7054D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
