@@ -13,11 +13,8 @@
 
 +(BOOL)returnTypeStringIsSignifyingVoid:(NSString *)returnTypeString;
 
-//-(instancetype)initWithClass:(Class)associatedClass selector:(SEL)selector;
 -(instancetype)initWithMethod:(Method)method;
 
-//@property (nonatomic, readonly) Class associatedClass;
-//@property (nonatomic, readonly) SEL selector;
 @property (nonatomic, readonly) Method method;
 
 @property (nonatomic, readonly) NSString *name;

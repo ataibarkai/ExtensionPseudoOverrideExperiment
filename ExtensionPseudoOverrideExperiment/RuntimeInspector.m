@@ -15,12 +15,23 @@
 
 #pragma mark - Public Methods -
 
-+(void)callMethodsApparentlyExtendingSelector:(SEL)selector onInstance:(id)instance {
++(void)callMethodsApparentlyExtendingSelector:(SEL)selector onInstance:(id)instance withArguments:(NSArray *)args {
     
     NSArray *methodsToCall = [self voidMethodsApparentlyExtendingSelector:selector onClass:object_getClass(instance)];
     
     for (InstanceMethod *method in methodsToCall) {
-        [instance performSelector:NSSelectorFromString(method.name)];
+        
+        SEL selectorToCall = NSSelectorFromString(method.name);
+        
+        NSMethodSignature *signature = [object_getClass(instance) instanceMethodSignatureForSelector:selectorToCall];
+        NSInvocation *invocation = [NSInvocation invocationWithMethodSignature: signature];
+        [invocation setSelector:selectorToCall];
+        [invocation setTarget:instance];
+        for (int i = 0; i < args.count; i++) {
+            [invocation setArgument:(__bridge void * _Nonnull)([args objectAtIndex:i]) atIndex:i];
+        }
+        
+        [invocation invoke];
     }
 }
 

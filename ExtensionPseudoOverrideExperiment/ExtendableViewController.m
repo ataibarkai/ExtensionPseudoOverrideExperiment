@@ -22,7 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [RuntimeInspector callMethodsApparentlyExtendingSelector:_cmd onInstance:self];
+    [RuntimeInspector callMethodsApparentlyExtendingSelector:_cmd onInstance:self withArguments:nil];
 }
 
 @end

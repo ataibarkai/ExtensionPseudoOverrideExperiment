@@ -12,6 +12,6 @@
 @interface RuntimeInspector : NSObject
 
 
-+(void)callMethodsApparentlyExtendingSelector:(SEL)selector onInstance:(id)instance;
++(void)callMethodsApparentlyExtendingSelector:(SEL)selector onInstance:(id)instance withArguments:(NSArray *)args;
 
 @end
