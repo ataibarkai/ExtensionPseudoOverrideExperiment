@@ -28,7 +28,7 @@
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-    [RuntimeInspector callMethodsApparentlyExtendingSelector:_cmd onInstance:self withArguments:nil];
+    [RuntimeInspector callMethodsApparentlyExtendingSelector:_cmd onInstance:self withArguments:&animated, nil];
 }
 
 @end
