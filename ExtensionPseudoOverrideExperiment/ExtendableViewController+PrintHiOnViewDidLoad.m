@@ -11,11 +11,11 @@
 
 @implementation ExtendableViewController (PrintHiOnViewDidLoad)
 
--(void)PrintHiOnViewDidLoad_viewDidLoad {
+-(void)PrintHiOnViewDidLoad_DXExtending_viewDidLoad {
     NSLog(@"Hi!");
 }
 
--(void)PrintHiOnViewDidLoad_viewDidAppear:(BOOL)animated {
+-(void)PrintHiOnViewDidLoad_DXExtending_viewDidAppear:(BOOL)animated {
     NSLog(@"HHEEEY");
 }
 
