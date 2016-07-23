@@ -11,8 +11,12 @@
 
 @implementation ExtendableViewController (PrintHiOnViewDidLoad)
 
--(void)viewDidLoad_PrintHiOnViewDidLoad {
+-(void)PrintHiOnViewDidLoad_viewDidLoad {
     NSLog(@"Hi!");
+}
+
+-(void)PrintHiOnViewDidLoad_viewDidAppear:(BOOL)animated {
+    NSLog(@"HHEEEY");
 }
 
 @end

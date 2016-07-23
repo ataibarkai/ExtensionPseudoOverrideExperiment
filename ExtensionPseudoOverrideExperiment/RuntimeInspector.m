@@ -46,11 +46,11 @@
         return [InstanceMethod returnTypeStringIsSignifyingVoid:element.returnTypeString];
     }];
     
-    NSString *acceptablePrefixForExtendingMethods = [NSString stringWithFormat:@"%@_", extendedMethod.name];
     NSArray <InstanceMethod *> *extensionsOfGivenMethod = [voidOnly filtered:^BOOL(InstanceMethod *element) {
         return
-        [element.name hasPrefix:acceptablePrefixForExtendingMethods] &&                 // the given method has an acceptable name
-        [element.typeEncodingString isEqualToString:extendedMethod.typeEncodingString]; // the given method has the same type as the extended method
+        [element.name hasSuffix:[NSString stringWithFormat:@"_%@", extendedMethod.name]] && // if we are extending `func`, we want functions of the form `something_func`
+        ! [element.name isEqualToString:extendedMethod.name] &&                             // no infinite loops please
+        [element.typeEncodingString isEqualToString:extendedMethod.typeEncodingString];     // the given method has the same type as the extended method
     }];
     
     return extensionsOfGivenMethod;

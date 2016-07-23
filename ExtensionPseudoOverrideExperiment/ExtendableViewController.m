@@ -25,4 +25,10 @@
     [RuntimeInspector callMethodsApparentlyExtendingSelector:_cmd onInstance:self withArguments:nil];
 }
 
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    [RuntimeInspector callMethodsApparentlyExtendingSelector:_cmd onInstance:self withArguments:nil];
+}
+
 @end
