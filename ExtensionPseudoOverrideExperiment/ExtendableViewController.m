@@ -23,7 +23,7 @@
 
 #pragma mark - Extendability Setup -
 
-# pragma mark Creation
+# pragma mark Creation Hooks
 
 -(instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
@@ -50,22 +50,20 @@
     self.viewDidLoadExtensions = [[NSMutableArray alloc] init];
     self.viewDidAppearExtensions = [[NSMutableArray alloc] init];
     
-    [RuntimeInspector callMethodsApparentlyExtendingSelector:@selector(create)
-                                                  onInstance:self
-                                               withArguments:nil];
+    [RuntimeInspector setupExtensionsForInstance:self];
 }
 
--(void)create {}
 
 
-# pragma mark Destruction
+# pragma mark Destruction Hooks
 
 -(void)dealloc {
-    [RuntimeInspector callMethodsApparentlyExtendingSelector:@selector(destroy)
-                                                  onInstance:self
-                                               withArguments:nil];
+    [RuntimeInspector destroyExtensionsForInstance:self];
 }
 
+#pragma mark Extension Hooks
+
+-(void)setup {}
 -(void)destroy {}
 
 

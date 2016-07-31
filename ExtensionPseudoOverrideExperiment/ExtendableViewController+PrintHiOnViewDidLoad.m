@@ -11,7 +11,7 @@
 
 @implementation ExtendableViewController (PrintHiOnViewDidLoad)
 
--(void)PrintHiOnViewDidLoad_DXExtending_create {
+-(void)PrintHiOnViewDidLoad_DXExtending_setup {
     
     // extend viewDidLoad
     [self addViewDidLoadExtension:^{
