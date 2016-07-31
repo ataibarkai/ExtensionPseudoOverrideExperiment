@@ -11,12 +11,21 @@
 
 @implementation ExtendableViewController (PrintHiOnViewDidLoad)
 
--(void)PrintHiOnViewDidLoad_DXExtending_viewDidLoad {
-    NSLog(@"Hi!");
+-(void)PrintHiOnViewDidLoad_DXExtending_create {
+    
+    // extend viewDidLoad
+    [self addViewDidLoadExtension:^{
+        NSLog(@"HI!!!!!!");
+    }];
+    
+    // extend viewDidAppear
+    [self addViewDidAppearExtension:^(BOOL animated) {
+        NSLog(@"Yoyoyo viewDidAppear:(animated = %@)", animated ? @"YES" : @"NO" );
+    }];
 }
 
--(void)PrintHiOnViewDidLoad_DXExtending_viewDidAppear:(BOOL)animated {
-    NSLog(@"HHEEEY");
+-(void)PrintHiOnViewDidLoad_DXExtending_destroy {
+    
 }
 
 @end
