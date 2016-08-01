@@ -10,4 +10,8 @@
 
 @interface ExtendableViewController (PrintHiOnViewDidLoad)
 
+/// By default, side effects of the cateogory are disabled.
+/// Subclasses must specifically opt-in.
+-(BOOL)PrintHiOnViewDidLoad_isImplemented;
+
 @end

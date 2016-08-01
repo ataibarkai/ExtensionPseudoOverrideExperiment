@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6336584C1D4FCED10014D164 /* Subclass1VC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6336584B1D4FCED10014D164 /* Subclass1VC.m */; };
+		6336584F1D4FCF290014D164 /* Subclass2VC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6336584E1D4FCF290014D164 /* Subclass2VC.m */; };
 		63C984261D42867900F7054D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C984251D42867900F7054D /* main.m */; };
 		63C984291D42867900F7054D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C984281D42867900F7054D /* AppDelegate.m */; };
 		63C9842C1D42867900F7054D /* ExtendableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C9842B1D42867900F7054D /* ExtendableViewController.m */; };
@@ -39,6 +41,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6336584A1D4FCED10014D164 /* Subclass1VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Subclass1VC.h; sourceTree = "<group>"; };
+		6336584B1D4FCED10014D164 /* Subclass1VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Subclass1VC.m; sourceTree = "<group>"; };
+		6336584D1D4FCF290014D164 /* Subclass2VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Subclass2VC.h; sourceTree = "<group>"; };
+		6336584E1D4FCF290014D164 /* Subclass2VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Subclass2VC.m; sourceTree = "<group>"; };
 		63C984211D42867900F7054D /* ExtensionPseudoOverrideExperiment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExtensionPseudoOverrideExperiment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63C984251D42867900F7054D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		63C984271D42867900F7054D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -90,6 +96,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		633658491D4FCE7B0014D164 /* Subclasses */ = {
+			isa = PBXGroup;
+			children = (
+				6336584A1D4FCED10014D164 /* Subclass1VC.h */,
+				6336584B1D4FCED10014D164 /* Subclass1VC.m */,
+				6336584D1D4FCF290014D164 /* Subclass2VC.h */,
+				6336584E1D4FCF290014D164 /* Subclass2VC.m */,
+			);
+			name = Subclasses;
+			sourceTree = "<group>";
+		};
 		63C984181D42867900F7054D = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +175,7 @@
 				63C9842A1D42867900F7054D /* ExtendableViewController.h */,
 				63C9842B1D42867900F7054D /* ExtendableViewController.m */,
 				63C984581D4289C800F7054D /* Categories */,
+				633658491D4FCE7B0014D164 /* Subclasses */,
 			);
 			name = ExtendableViewController;
 			sourceTree = "<group>";
@@ -314,8 +332,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6336584F1D4FCF290014D164 /* Subclass2VC.m in Sources */,
 				63C9842C1D42867900F7054D /* ExtendableViewController.m in Sources */,
 				63C984291D42867900F7054D /* AppDelegate.m in Sources */,
+				6336584C1D4FCED10014D164 /* Subclass1VC.m in Sources */,
 				63E3E9911D42DA2600CA69DE /* RuntimeInspector.m in Sources */,
 				63E3E98D1D42D4B500CA69DE /* InstanceMethod.m in Sources */,
 				63E3E9941D42E14F00CA69DE /* NSArray+Functional.m in Sources */,

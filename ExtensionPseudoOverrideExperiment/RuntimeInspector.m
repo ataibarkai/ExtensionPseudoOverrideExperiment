@@ -114,6 +114,24 @@
 
 +(NSArray<InstanceMethod *> *)allInstanceMethodsAssociatedWithClass:(Class)associatedClass {
     
+    NSArray <InstanceMethod *> *allWithPossibleDuplicates = [self possibleDuplicates_allInstanceMethodsAssociatedWithClass:associatedClass];
+    
+    // to get rid of duplicates:
+    // add all elements to a dictionary, indexed by the method's `uniqueIdentifier`
+    NSMutableDictionary<NSString *, InstanceMethod *> *equivalentDict = [NSMutableDictionary dictionaryWithCapacity:allWithPossibleDuplicates.count];
+    for (InstanceMethod *method in allWithPossibleDuplicates) {
+        [equivalentDict setValue:method forKey:method.uniqueIdentifier];
+    }
+    
+    return equivalentDict.allValues;
+}
+
++(NSArray<InstanceMethod *> *)possibleDuplicates_allInstanceMethodsAssociatedWithClass:(Class)associatedClass {
+    
+    if (associatedClass == nil) {
+        return [NSArray array];
+    }
+        
     // get all of the methods associated with the given class, in the most primitive representation
     unsigned int methodListCount = 0;
     Method * methodList = class_copyMethodList(associatedClass, &methodListCount);
@@ -125,7 +143,11 @@
         [returned addObject: correspondingInstanceMethod];
     }
     
-    return returned;
+    free(methodList);
+    
+    // recursively call this on every superclass
+    return [returned arrayByAddingObjectsFromArray:
+            [self allInstanceMethodsAssociatedWithClass:[associatedClass superclass]]];
 }
 
 

@@ -11,7 +11,16 @@
 
 @implementation ExtendableViewController (PrintHiOnViewDidLoad)
 
+-(BOOL)PrintHiOnViewDidLoad_isImplemented {
+    return NO;
+}
+
 -(void)PrintHiOnViewDidLoad_DXExtending_setup {
+    
+    // if only perform the side effects in subclasses that specifically opt-in.
+    if (![self PrintHiOnViewDidLoad_isImplemented]) {
+        return;
+    }
     
     // extend viewDidLoad
     [self addViewDidLoadExtension:^{
@@ -26,6 +35,10 @@
 
 -(void)PrintHiOnViewDidLoad_DXExtending_destroy {
     
+    // if only perform the side effects in subclasses that specifically opt-in.
+    if (![self PrintHiOnViewDidLoad_isImplemented]) {
+        return;
+    }
 }
 
 @end
