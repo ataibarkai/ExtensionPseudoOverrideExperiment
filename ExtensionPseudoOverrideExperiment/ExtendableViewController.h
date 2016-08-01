@@ -10,6 +10,11 @@
 
 @interface ExtendableViewController : UIViewController
 
+typedef void (^ViewDidLoad_Ext)();
+typedef void (^ViewDidAppear_Ext)(BOOL animated);
+
+-(void)addViewDidLoadExtension:(nonnull ViewDidLoad_Ext)ext;
+-(void)addViewDidAppearExtension:(nonnull ViewDidAppear_Ext)ext;
 
 @end
 

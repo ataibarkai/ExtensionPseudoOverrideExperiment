@@ -21,5 +21,7 @@
 @property (nonatomic, readonly) NSString *returnTypeString;
 @property (nonatomic, readonly) NSString *typeEncodingString;
 
+@property (nonatomic, readonly) NSString *uniqueIdentifier;
+
 
 @end

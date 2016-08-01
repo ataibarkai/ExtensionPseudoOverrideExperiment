@@ -52,4 +52,9 @@
     return [NSString stringWithCString:method_getTypeEncoding(self.method) encoding:NSASCIIStringEncoding];
 }
 
+
+-(NSString *)uniqueIdentifier {
+    return [NSString stringWithFormat:@"%@-%@", self.name, self.typeEncodingString];
+}
+
 @end

@@ -11,12 +11,34 @@
 
 @implementation ExtendableViewController (PrintHiOnViewDidLoad)
 
--(void)PrintHiOnViewDidLoad_DXExtending_viewDidLoad {
-    NSLog(@"Hi!");
+-(BOOL)PrintHiOnViewDidLoad_isImplemented {
+    return NO;
 }
 
--(void)PrintHiOnViewDidLoad_DXExtending_viewDidAppear:(BOOL)animated {
-    NSLog(@"HHEEEY");
+-(void)PrintHiOnViewDidLoad_DXExtending_setup {
+    
+    // if only perform the side effects in subclasses that specifically opt-in.
+    if (![self PrintHiOnViewDidLoad_isImplemented]) {
+        return;
+    }
+    
+    // extend viewDidLoad
+    [self addViewDidLoadExtension:^{
+        NSLog(@"HI!!!!!!");
+    }];
+    
+    // extend viewDidAppear
+    [self addViewDidAppearExtension:^(BOOL animated) {
+        NSLog(@"Yoyoyo viewDidAppear:(animated = %@)", animated ? @"YES" : @"NO" );
+    }];
+}
+
+-(void)PrintHiOnViewDidLoad_DXExtending_destroy {
+    
+    // if only perform the side effects in subclasses that specifically opt-in.
+    if (![self PrintHiOnViewDidLoad_isImplemented]) {
+        return;
+    }
 }
 
 @end

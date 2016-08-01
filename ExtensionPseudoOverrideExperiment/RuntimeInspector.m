@@ -15,6 +15,26 @@
 
 #pragma mark - Public Methods -
 
++(void)setupExtensionsForInstance:(id)instance {
+    [self callMethodsApparentlyExtendingSelector:NSSelectorFromString(@"setup") onInstance:instance withArguments:nil];
+}
+
++(void)destroyExtensionsForInstance:(id)instance {
+    [self callMethodsApparentlyExtendingSelector:NSSelectorFromString(@"destroy") onInstance:instance withArguments:nil];
+}
+
+
+#pragma mark - Private Helper Methods -
+
+/**
+ @brief Call every method which extends the given method according to our method-extending convention.
+ 
+ @discussion
+ 
+ @param selector the selector associated with the method we wish to extend
+ @param instance the instance on which we wish to invoke the extending methods
+ @param args     a `nil`-terminated list of `void *` buffers (pointers) to the arguments to be passed to the extending methods
+ */
 +(void)callMethodsApparentlyExtendingSelector:(SEL)selector onInstance:(id)instance withArguments:(void *)arg0, ... {
     
     // gather variadic arguments into an array
@@ -29,10 +49,6 @@
     
     [self callMethodsApparentlyExtendingSelector:selector onInstance:instance withArgumentsArray:argumentArray];
 }
-
-
-
-#pragma mark - Private Helper Methods -
 
 /**
  @brief Call every method which extends the given method according to our method-extending convention
@@ -98,6 +114,24 @@
 
 +(NSArray<InstanceMethod *> *)allInstanceMethodsAssociatedWithClass:(Class)associatedClass {
     
+    NSArray <InstanceMethod *> *allWithPossibleDuplicates = [self possibleDuplicates_allInstanceMethodsAssociatedWithClass:associatedClass];
+    
+    // to get rid of duplicates:
+    // add all elements to a dictionary, indexed by the method's `uniqueIdentifier`
+    NSMutableDictionary<NSString *, InstanceMethod *> *equivalentDict = [NSMutableDictionary dictionaryWithCapacity:allWithPossibleDuplicates.count];
+    for (InstanceMethod *method in allWithPossibleDuplicates) {
+        [equivalentDict setValue:method forKey:method.uniqueIdentifier];
+    }
+    
+    return equivalentDict.allValues;
+}
+
++(NSArray<InstanceMethod *> *)possibleDuplicates_allInstanceMethodsAssociatedWithClass:(Class)associatedClass {
+    
+    if (associatedClass == nil) {
+        return [NSArray array];
+    }
+        
     // get all of the methods associated with the given class, in the most primitive representation
     unsigned int methodListCount = 0;
     Method * methodList = class_copyMethodList(associatedClass, &methodListCount);
@@ -109,7 +143,11 @@
         [returned addObject: correspondingInstanceMethod];
     }
     
-    return returned;
+    free(methodList);
+    
+    // recursively call this on every superclass
+    return [returned arrayByAddingObjectsFromArray:
+            [self allInstanceMethodsAssociatedWithClass:[associatedClass superclass]]];
 }
 
 
