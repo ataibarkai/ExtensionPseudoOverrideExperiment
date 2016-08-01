@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-typedef BOOL (^FilterBlock)(id element);
-typedef id (^MapBlock)(id element);
+typedef BOOL (^FilterBlock)(id _Nonnull element);
+typedef id _Nonnull (^MapBlock)(id _Nonnull element);
 
 @interface NSArray (Functional)
 
@@ -20,7 +20,7 @@ typedef id (^MapBlock)(id element);
  
  @return a new filtered array
  */
--(instancetype)filtered:(FilterBlock)shouldInclude;
+-(nonnull instancetype)filtered:(nonnull FilterBlock)shouldInclude;
 
 /**
  @brief Transfors `self` into a new array using the given transformation
@@ -29,6 +29,6 @@ typedef id (^MapBlock)(id element);
  
  @return A new transformed array
  */
--(instancetype)map:(MapBlock)transformation;
+-(nonnull instancetype)map:(nonnull MapBlock)transformation;
 
 @end
