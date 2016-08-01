@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6336584C1D4FCED10014D164 /* Subclass1VC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6336584B1D4FCED10014D164 /* Subclass1VC.m */; };
 		6336584F1D4FCF290014D164 /* Subclass2VC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6336584E1D4FCF290014D164 /* Subclass2VC.m */; };
+		63A9070C1D4FDCB000D0DC7D /* ExtendableViewController+SayByOnViewDidLoad.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A9070B1D4FDCB000D0DC7D /* ExtendableViewController+SayByOnViewDidLoad.m */; };
 		63C984261D42867900F7054D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C984251D42867900F7054D /* main.m */; };
 		63C984291D42867900F7054D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C984281D42867900F7054D /* AppDelegate.m */; };
 		63C9842C1D42867900F7054D /* ExtendableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C9842B1D42867900F7054D /* ExtendableViewController.m */; };
@@ -45,6 +46,8 @@
 		6336584B1D4FCED10014D164 /* Subclass1VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Subclass1VC.m; sourceTree = "<group>"; };
 		6336584D1D4FCF290014D164 /* Subclass2VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Subclass2VC.h; sourceTree = "<group>"; };
 		6336584E1D4FCF290014D164 /* Subclass2VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Subclass2VC.m; sourceTree = "<group>"; };
+		63A9070A1D4FDCB000D0DC7D /* ExtendableViewController+SayByOnViewDidLoad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ExtendableViewController+SayByOnViewDidLoad.h"; sourceTree = "<group>"; };
+		63A9070B1D4FDCB000D0DC7D /* ExtendableViewController+SayByOnViewDidLoad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ExtendableViewController+SayByOnViewDidLoad.m"; sourceTree = "<group>"; };
 		63C984211D42867900F7054D /* ExtensionPseudoOverrideExperiment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExtensionPseudoOverrideExperiment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63C984251D42867900F7054D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		63C984271D42867900F7054D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -185,6 +188,8 @@
 			children = (
 				63C984591D4289F500F7054D /* ExtendableViewController+PrintHiOnViewDidLoad.h */,
 				63C9845A1D4289F500F7054D /* ExtendableViewController+PrintHiOnViewDidLoad.m */,
+				63A9070A1D4FDCB000D0DC7D /* ExtendableViewController+SayByOnViewDidLoad.h */,
+				63A9070B1D4FDCB000D0DC7D /* ExtendableViewController+SayByOnViewDidLoad.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -339,6 +344,7 @@
 				63E3E9911D42DA2600CA69DE /* RuntimeInspector.m in Sources */,
 				63E3E98D1D42D4B500CA69DE /* InstanceMethod.m in Sources */,
 				63E3E9941D42E14F00CA69DE /* NSArray+Functional.m in Sources */,
+				63A9070C1D4FDCB000D0DC7D /* ExtendableViewController+SayByOnViewDidLoad.m in Sources */,
 				63C984261D42867900F7054D /* main.m in Sources */,
 				63C9845B1D4289F500F7054D /* ExtendableViewController+PrintHiOnViewDidLoad.m in Sources */,
 			);

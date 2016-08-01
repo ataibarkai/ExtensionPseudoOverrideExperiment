@@ -1,5 +1,5 @@
 //
-//  Subclass2VC.h
+//  ExtendableViewController+SayByOnViewDidLoad.h
 //  ExtensionPseudoOverrideExperiment
 //
 //  Created by Atai Barkai on 8/1/16.
@@ -8,7 +8,8 @@
 
 #import "ExtendableViewController.h"
 
-@interface Subclass2VC : ExtendableViewController
+@interface ExtendableViewController (SayByOnViewDidLoad)
 
+-(BOOL)SayByeOnViewDidLoad_isImplemented;
 
 @end

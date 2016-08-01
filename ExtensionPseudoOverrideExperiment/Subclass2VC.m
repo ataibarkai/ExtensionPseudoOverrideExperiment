@@ -7,9 +7,15 @@
 //
 
 #import "Subclass2VC.h"
+#import "ExtendableViewController+SayByOnViewDidLoad.m"
 
 
 @implementation Subclass2VC
 
+# pragma mark Categories Opt-In
+
+-(BOOL)SayByeOnViewDidLoad_isImplemented {
+    return YES;
+}
 
 @end

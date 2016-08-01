@@ -12,9 +12,13 @@
 @implementation Subclass1VC
 
 # pragma mark Categories Opt-In
+
 -(BOOL)PrintHiOnViewDidLoad_isImplemented {
     return YES;
 }
 
+-(BOOL)SayByeOnViewDidLoad_isImplemented {
+    return YES;
+}
 
 @end
